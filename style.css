@@ -10,7 +10,6 @@ html{
 body{
     background-color:#5E553C;
     color: white;
-    
 
 }
 #header{
@@ -40,15 +39,15 @@ nav ul li{
 
 nav ul li a{
         text-decoration: none;
-        color: cyan;
+        color: black;
         padding: 5px 20px;
-        border: 1px solid cyan;
+        border: 1px solid black;
         transition: background 0.5s;
 }
 
 nav ul li a:hover{
-    background-color: cyan;
-    color: black;
+    background-color: #5E553C;
+    color: white;
 }    
 .headertext{
     color: BLack;
@@ -63,7 +62,9 @@ nav ul li a:hover{
 /*--about*/
 #about{
 padding: 50px 50px;
-color: silver;
+color: #5E553C;
+font-weight: bold;
+background-color: #DACBB5;
 }
 .row{
     display: flex;
@@ -71,16 +72,66 @@ color: silver;
     flex-wrap: wrap;
 }
 .aboutcol1{
-    flex-basis: 40%;
+    flex-basis: 40%;width: 100%;
+    border-radius: 15px;  
+    overflow: hidden;
 }
 .aboutcol1 img{
     width: 100%;
     border-radius: 15px;
-    transition: transform 0.5s;
 }
-.aboutcol1 img:hover{
-    transform: translateY(-10px);
+.slides{
+    
+    width: 500%;
+    height: 500px;
+    display: flex;
 }
+.slides input{
+    display: none;
+}
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+.navigation-manual{
+position: absolute;
+width: 400px;
+margin-top: -40px;
+display: flex;
+justify-content: center;
+}
+.manual-btn{
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 10px;
+}
+.manual-btn:hover{
+    background: black;
+}
+#radio1:checked ~ .first{
+    margin-left:0;
+}
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+#radio5:checked ~ .first{
+    margin-left: -80%;
+}
+#radio6:checked ~ .first{
+    margin-left: -100%;
+}
+
 .aboutcol2{
     flex-basis: 55%;
     text-align: justify;
@@ -90,7 +141,7 @@ color: silver;
 .title{
     font-size: 60px;
     font-weight: 600;
-    color: cyan;
+    color: White;
 }
 .tabtitles{
     display: flex;
@@ -107,7 +158,7 @@ color: silver;
     content: '';
     width: 0;
     height: 3px;
-    background: black;
+    background: white;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -121,7 +172,7 @@ color: silver;
     margin: 10px 0;
 }
 .tab-skills ul li span{
-    color: white;
+    color: green;
     font-size: 14px;
 }
 .tab-skills{
