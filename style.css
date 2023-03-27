@@ -1,14 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Oswald;
     box-sizing: border-box;
 }
 html{
     scroll-behavior: smooth;
 }
 body{
-    background-color:#5E553C;
+    background-color:#F7DDA4;
     color: white;
 
 }
@@ -39,18 +41,19 @@ nav ul li{
 
 nav ul li a{
         text-decoration: none;
-        color: black;
+        color: white;
         padding: 5px 20px;
-        border: 1px solid black;
+        border: 1px solid #F7DDA4;
         transition: background 0.5s;
 }
 
 nav ul li a:hover{
-    background-color: #5E553C;
+    background-color: #E2C275;
     color: white;
 }    
 .headertext{
-    color: BLack;
+    font-family: Oswald;    
+    color: white;
     text-align: center;
     margin-top: 20%;
     font-size: 30px;
@@ -62,9 +65,9 @@ nav ul li a:hover{
 /*--about*/
 #about{
 padding: 50px 50px;
-color: #5E553C;
+color: white;
 font-weight: bold;
-background-color: #DACBB5;
+background-color: #C36A2D;
 }
 .row{
     display: flex;
@@ -139,9 +142,16 @@ justify-content: center;
 }
 
 .title{
+    font-family: Oswald;
     font-size: 60px;
     font-weight: 600;
-    color: White;
+    color: #C36A2D;
+}
+.h1{
+    font-family: Oswald;
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
 }
 .tabtitles{
     display: flex;
@@ -181,19 +191,24 @@ justify-content: center;
 .tab-skills.active-tab{
     display: block;
 }
+
+
 /*----services--*/
+
+
 #services{
 padding: 30px 0;
-background-color: #648981   ;
+background-color: #F7DDA4;
 }
-.services-list{
+.footm{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 1230px;
+    height: 300px;
     grid-gap: 40px;
     margin-top: 50px;
 }
-.services-list div{
-background: black;
+.footm div{
+background: #C36A2D;
 padding: 40px;
 font-size: 13px;
 text-align: justify;
@@ -202,26 +217,100 @@ font-weight: 300;
 border-radius: 10px;
 transition: background 0.5s, transform 0.5s;
 }
-.services-list div i{
-    font-size: 50px;
-    margin-bottom: 30px;
-}
-.services-list div h2{
-    font-size: 30px;
+
+.footm h1{
+    text-align: center;
+    font-size: 40px;
     font-weight: 500;
     margin-bottom: 15px;
 }
-.services-list div a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
+
+.footm p{
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 15px;
 }
-.services-list div:hover{
-    background: cyan;
+
+.footm div:hover{
+    background-image: url(images/footm.jpg);
     transform: translateY(-10px);
-    color: black;
+    color: white;
+}
+
+.backm{
+    display: grid;
+    width: 1230px;
+    height: 300px;
+    grid-gap: 40px;
+    margin-top: 130px;
+}
+.backm div{
+background: #C36A2D;
+padding: 40px;
+font-size: 13px;
+text-align: justify;
+text-justify: inter-word;
+font-weight: 300;
+border-radius: 10px;
+transition: background 0.5s, transform 0.5s;
+}
+
+.backm h1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.backm p{
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.backm div:hover{
+    background-image: url(images/backm.jpg);
+    transform: translateY(-10px);
+    color: white;
+}
+
+
+.bodym{
+    display: grid;
+    width: 1230px;
+    height: 300px;
+    grid-gap: 40px;
+    margin-top: 170px;
+    margin-bottom: 120px;
+}
+.bodym div{
+background: #C36A2D;
+padding: 40px;
+font-size: 13px;
+text-align: justify;
+text-justify: inter-word;
+font-weight: 300;
+border-radius: 10px;
+transition: background 0.5s, transform 0.5s;
+}
+
+.bodym h1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.bodym p{
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.bodym div:hover{
+    background-image: url(images/bodym.jpg);
+    transform: translateY(-10px);
+    color: white;
 }
 /*---LOCATION---*/
 #hobbies{
@@ -245,6 +334,7 @@ transition: background 0.5s, transform 0.5s;
     border-radius: 10px;
     display: block;
     transition: transform 0.5s;
+
 }
 .layer{
     width: 100%;
@@ -289,7 +379,7 @@ transition: background 0.5s, transform 0.5s;
     transition: background 0.5s;
 }
 .btn:hover{
-    background: cyan;
+    background:  #C36A2D;
     color: white;
 }
 /*-----contact------*/
@@ -304,7 +394,7 @@ transition: background 0.5s, transform 0.5s;
     margin-top: 30px;   
 }
 .contact-left p i{
-    color: cyan;
+    color:  #C36A2D;
     margin-right: 15px;
     font-size: 25px;
 }
@@ -320,16 +410,16 @@ transition: background 0.5s, transform 0.5s;
     transition: transform 0.5s;
 }
 .social-icons a:hover{
-    color: cyan;
+    color:  #C36A2D;
     transform: translateY(-5px);
 }
 .btn.btn2{
     display: inline-block;
-    background: black;   
+    background: #C36A2D;   
 }
 .btn.btn2:hover{
-    color: black;
-    background: cyan;
+    color:  white;
+    background:  black;
 }
 .contact-right form{
     width: 100%;
