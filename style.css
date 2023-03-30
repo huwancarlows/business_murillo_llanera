@@ -22,7 +22,7 @@ body{
     background-image: url(images/try1.jpg);
 }
 .container{
-    padding: 5px 5%;
+    padding: 20px 20%;
 }
 nav{
     display:flex;
@@ -313,27 +313,25 @@ transition: background 0.5s, transform 0.5s;
     color: white;
 }
 /*---LOCATION---*/
-#hobbies{
-    padding: 50px 0;
-    background-color: black;
-}
-.hobby-list{
+
+.ustp-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 0px;
     margin-top: 10px;
 }
-.hobby{
+.ustp{
     border-radius: 10px;
     position: relative;
     overflow: hidden;
     
 }
-.hobby img{
-    width: 100%;
+.ustp img{
+    width: 50%;
     border-radius: 10px;
-    display: block;
+    display: absolute;
     transition: transform 0.5s;
+    margin-left: 25%;
 
 }
 .layer{
@@ -354,17 +352,16 @@ transition: background 0.5s, transform 0.5s;
     transition: height 0.5s;
 }
 .layer p{
-    height: 100%;
-     width: 100%;
-     left: 0;
-     top: 0;
-     border-radius: 15px;
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
 
 }
-.hobby:hover img{
+.ustp:hover img{
     transform: scale(1.1);
 }
-.hobby:hover .layer{
+.ustp:hover .layer{
     height: 100%;
 }
 .btn{
