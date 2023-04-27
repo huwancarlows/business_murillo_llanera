@@ -22,7 +22,7 @@ body{
     background-image: url(images/try1.jpg);
 }
 .container{
-    padding: 20px 20%;
+    padding: 5px 5%;
 }
 nav{
     display:flex;
