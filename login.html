@@ -16,7 +16,7 @@
     <div class="container">
       <div class="formbox">
         <h1 id="ttl">Sign Up</h1>
-        <form>
+        <form action="login.html">
           <div class="inputgroup">
             <div class="inputfield" id="nmfld">
               <i class="fa-solid fa-user fa-bounce"></i>
@@ -25,18 +25,18 @@
 
             <div class="inputfield">
               <i class="fa-solid fa-envelope fa-bounce"></i>
-              <input type="email" placeholder="Email" />
+              <input type="email" id="email" placeholder="Email" />
             </div>
 
             <div class="inputfield">
               <i class="fa-solid fa-lock fa-bounce"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" id="pwd" placeholder="Password" />
             </div>
             <p>Lost Password <a href="#">Click Here!</a></p>
           </div>
           <div class="btnfield">
-            <button type="button" id="sgnn">Sign up</button>
-            <button type="button" id="lgnn">Log in</button>
+            <input type="submit" value="Sign Up" onclick="addData()" />
+            <input type="submit" value="Sign In" onclick="checkData()" />
           </div>
         </form>
       </div>

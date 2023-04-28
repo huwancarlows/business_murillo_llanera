@@ -91,7 +91,7 @@ form p a{
     display: flex;
     justify-content: space-between;
 }
-.btnfield button{
+.btnfield input{
     flex-basis: 48%;
     background: #F7DDA4;
     color: black;
@@ -102,7 +102,8 @@ form p a{
     cursor: pointer;
     transition: background 1s;
 }
-.btnfield button:hover{
+
+.btnfield input:hover{
     background:  #C36A2D;
     color: white;
 }
