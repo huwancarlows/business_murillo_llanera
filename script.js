@@ -16,7 +16,7 @@ const wrapper = document.querySelector(".wrapper"),
           var getEmail = localStorage.getItem("userEmail");
           var getPwd = localStorage.getItem("userPwd");
 
-          if (email == "admin@gmail.com" && password == "admin123") {
+          if (email == "admin@gmail.com" && password == "12345") {
             window.location.assign("index.html");
             alert("Login Successfully");
           }
