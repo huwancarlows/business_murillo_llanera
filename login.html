@@ -5,41 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="loginstyle.css" />
-    <script src="script.js"></script>
     <script
       src="https://kit.fontawesome.com/7feff4d203.js"
       crossorigin="anonymous"
     ></script>
-    <title>Login</title>
+    <!--<title>Login & Signup Form</title>-->
   </head>
   <body>
-    <div class="container">
-      <div class="formbox">
-        <h1 id="ttl">Sign Up</h1>
-        <form action="login.html">
-          <div class="inputgroup">
-            <div class="inputfield" id="nmfld">
-              <i class="fa-solid fa-user fa-bounce"></i>
-              <input type="text" placeholder="Name" />
-            </div>
-
-            <div class="inputfield">
-              <i class="fa-solid fa-envelope fa-bounce"></i>
-              <input type="email" id="email" placeholder="Email" />
-            </div>
-
-            <div class="inputfield">
-              <i class="fa-solid fa-lock fa-bounce"></i>
-              <input type="password" id="pwd" placeholder="Password" />
-            </div>
-            <p>Lost Password <a href="#">Click Here!</a></p>
+    <section class="wrapper">
+      <div class="form signup">
+        <header>Signup</header>
+        <form action="#">
+          <i class="fa-solid fa-user fa-bounce"></i>
+          <input type="text" placeholder="Full name" id="usr" required />
+          <i class="fa-solid fa-envelope fa-bounce"></i>
+          <input type="text" placeholder="Email address" id="eml" required />
+          <i class="fa-solid fa-lock fa-bounce"></i>
+          <input type="password" placeholder="Password" id="pwd" required />
+          <div class="checkbox">
+            <input type="checkbox" id="signupCheck" />
+            <label for="signupCheck">I accept all terms & conditions</label>
           </div>
-          <div class="btnfield">
-            <input type="submit" value="Sign Up" onclick="addData()" />
-            <input type="submit" value="Sign In" onclick="checkData()" />
-          </div>
+          <input type="submit" value="Signup" onclick="addData()" />
         </form>
       </div>
-    </div>
+
+      <div class="form login">
+        <header>Login</header>
+        <form action="#">
+          <input type="text" placeholder="Email address" id="email" required />
+          <input
+            type="password"
+            placeholder="Password"
+            id="password"
+            required
+          />
+          <a href="#">Forgot password?</a>
+          <input type="submit" value="Login" onclick="auth()" />
+        </form>
+      </div>
+      <script src="script.js"></script>
+    </section>
   </body>
 </html>

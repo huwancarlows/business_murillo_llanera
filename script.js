@@ -1,32 +1,38 @@
-function addData(){
-	var email = document.getElementById('email').value;
-	var pass = document.getElementById('pwd').value;
+const wrapper = document.querySelector(".wrapper"),
+          signupHeader = document.querySelector(".signup header"),
+          loginHeader = document.querySelector(".login header");
 
-	localStorage.setItem('userEmail',email);
-	localStorage.setItem('userPwd',pass);
-}
+        loginHeader.addEventListener("click", () => {
+          wrapper.classList.add("active");
+        });
+        signupHeader.addEventListener("click", () => {
+          wrapper.classList.remove("active");
+        });
 
-function checkData(){
-	var enterEmail = document.getElementById('email').value;
-	var enterPwd = document.getElementById('pwd').value;
+        function auth() {
+          var email = document.getElementById("email").value;
+          var password = document.getElementById("password").value;
 
+          var getEmail = localStorage.getItem("userEmail");
+          var getPwd = localStorage.getItem("userPwd");
 
-    var getEmail = localStorage.getItem('userEmail');
-	var getPwd = localStorage.getItem('userPwd');
+          if (email == "admin@gmail.com" && password == "admin123") {
+            window.location.assign("index.html");
+            alert("Login Successfully");
+          }
 
-	if(enterEmail == getEmail)
-	{
-		if(enterPwd == getPwd)
-		{
-			alert("Login Sucessful");
-		}
-		else
-		{
-			alert("wrong password")
-		}
-	}
-	else
-	{
-		alert("Invalid details")
-	}
-}
+          if (email == getEmail) {
+            if (password == getPwd) {
+              window.location.assign("index.html");
+              alert("Login Sucessful");
+            } else alert("Wrong password");
+          }
+        }
+
+        function addData() {
+          var email2 = document.getElementById("eml").value;
+          var password2 = document.getElementById("pwd").value;
+
+          localStorage.setItem("userEmail", email2);
+          localStorage.setItem("userPwd", password2);
+        }
