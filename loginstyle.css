@@ -23,7 +23,7 @@
     width: 50%;
     max-width: 450px;
     position: absolute;
-    border-radius: 12px;
+    border-radius: 150px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -41,7 +41,7 @@
    );
    width: calc(
      100% +
-       220px
+      220px
    );
    padding: 20px
      140px;
@@ -155,4 +155,3 @@
    color: black;
    border: none;
  }
- 
