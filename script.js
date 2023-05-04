@@ -10,28 +10,28 @@ const wrapper = document.querySelector(".wrapper"),
         });
 
         function auth() {
-          var email = document.getElementById("email").value;
-          var password = document.getElementById("password").value;
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
 
-          var getEmail = localStorage.getItem("userEmail");
-          var getPwd = localStorage.getItem("userPwd");
+          const getEmail = localStorage.getItem("userEmail");
+          const getPwd = localStorage.getItem("userPwd");
 
           if (email == "admin@gmail.com" && password == "12345") {
-            window.location.assign("index.html");
+            window.location.assign("landing.html");
             alert("Login Successfully");
           }
 
           if (email == getEmail) {
             if (password == getPwd) {
-              window.location.assign("index.html");
+              window.location.assign("landing.html");
               alert("Login Sucessful");
             } else alert("Wrong password");
           }
         }
 
         function addData() {
-          var email2 = document.getElementById("eml").value;
-          var password2 = document.getElementById("pwd").value;
+          const email2 = document.getElementById("eml").value;
+          const password2 = document.getElementById("pwd").value;
 
           localStorage.setItem("userEmail", email2);
           localStorage.setItem("userPwd", password2);
