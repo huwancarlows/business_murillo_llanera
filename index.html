@@ -4,47 +4,273 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="loginstyle.css" />
+    <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/7feff4d203.js"
       crossorigin="anonymous"
     ></script>
-    <!--<title>Login & Signup Form</title>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>Business</title>
   </head>
   <body>
-    <section class="wrapper">
-      <div class="form signup">
-        <header>Signup</header>
-        <form action="#">
-          <i class="fa-solid fa-user fa-bounce"></i>
-          <input type="text" placeholder="Full name" id="usr" required />
-          <i class="fa-solid fa-envelope fa-bounce"></i>
-          <input type="text" placeholder="Email address" id="eml" required />
-          <i class="fa-solid fa-lock fa-bounce"></i>
-          <input type="password" placeholder="Password" id="pwd" required />
-          <div class="checkbox">
-            <input type="checkbox" id="signupCheck" />
-            <label for="signupCheck">I accept all terms & conditions</label>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/logo.png" class="logo" />
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Signup</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#contact">Contacts</a></li>
+          </ul>
+        </nav>
+        <div class="headertext">
+          <p>Relax your body, soul, and mind</p>
+          <h1>J & J SPA AND MASSAGE</h1>
+        </div>
+      </div>
+    </div>
+    <!--about-->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="aboutcol1">
+            <div class="slides">
+              <input type="radio" name="radio-btn" id="radio1" />
+              <input type="radio" name="radio-btn" id="radio2" />
+              <input type="radio" name="radio-btn" id="radio3" />
+              <input type="radio" name="radio-btn" id="radio4" />
+              <input type="radio" name="radio-btn" id="radio5" />
+              <input type="radio" name="radio-btn" id="radio6" />
+              <div class="slide first">
+                <img src="images/1.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="images/2.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="images/3.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="images/4.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="images/5.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="images/6.jpg" alt="" />
+              </div>
+            </div>
+            <div class="navigation-manual">
+              <label for="radio1" class="manual-btn"></label>
+              <label for="radio2" class="manual-btn"></label>
+              <label for="radio3" class="manual-btn"></label>
+              <label for="radio4" class="manual-btn"></label>
+              <label for="radio5" class="manual-btn"></label>
+              <label for="radio6" class="manual-btn"></label>
+            </div>
           </div>
-          <input type="submit" value="Signup" onclick="addData()" />
-        </form>
-      </div>
+          <div class="aboutcol2">
+            <h1 class="h1">About</h1>
+            <p>
+              Welcome to our massage and spa company, where we are committed to providing you with the ultimate relaxation experience. Our skilled and professional therapists offer a wide range of services, from deep tissue massages to aromatherapy treatments, all designed to soothe your mind, body, and soul.
 
-      <div class="form login">
-        <header>Login</header>
-        <form action="#">
-          <input type="text" placeholder="Email address" id="email" required />
-          <input
-            type="password"
-            placeholder="Password"
-            id="password"
-            required
-          />
-          <a href="#">Forgot password?</a>
-          <input type="submit" value="Login" onclick="auth()" />
-        </form>
+Our spa is designed to transport you to a world of tranquility and rejuvenation, with serene surroundings and an atmosphere of pure relaxation. Our facilities include comfortable and private treatment rooms, steam rooms, saunas, and Jacuzzis, all aimed at ensuring your total relaxation.
+
+At our spa, we use only the finest quality products, ensuring that your skin and body receive the best possible care. We take pride in offering personalized treatments that are tailored to meet your unique needs, whether you are looking to relieve stress, reduce pain, or simply indulge in a little self-care.
+
+Our team of expert therapists is dedicated to providing you with a truly exceptional experience, and we strive to exceed your expectations in every way. So why not treat yourself to a day of pampering and relaxation at our massage and spa company? We look forward to welcoming you and helping you unwind and rejuvenate.
+            </p>
+            <div class="tabtitles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                TIME AVAILABLITY
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">MASSEUSES</p>
+              <p class="tab-links" onclick="opentab('education')">MASSEURS</p>
+            </div>
+            <div class="tab-skills active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>FOOT MASSAGE</span><br />Mon-Th<br />6:00AM to 5:00PM
+                </li>
+                <li>
+                  <span>BACK MASSAGE</span><br />Tue-Wed<br />6:00AM to 5:00PM
+                </li>
+                <li>
+                  <span>BODY MASSAGE</span><br />Fr-Sat<br />6:00AM to 5:00PM
+                </li>
+              </ul>
+            </div>
+            <div class="tab-skills" id="experience">
+              <ul>
+                <li>
+                  <span>LISA MANOBAN</span><br />FOOT, BODY <br />
+                  BACK
+                </li>
+                <li>
+                  <span>JULIA BARRETO</span><br />FOOT, BODY <br />
+                  BACK
+                </li>
+                <li>
+                  <span>NANCY JEWEL MCDONIE</span><br />FOOT, BODY <br />
+                  BACK
+                </li>
+              </ul>
+            </div>
+            <div class="tab-skills" id="education">
+              <ul>
+                <li>
+                  <span>JUSTINE PHILIP LLANERA</span><br />FOOT, BODY <br />
+                  BACK
+                </li>
+                <li>
+                  <span>JUAN CARLOS MURILLO</span><br />FOOT, BODY <br />
+                  BACK
+                </li>
+                <li>
+                  <span>KENT BRYAN ASILO</span><br />FOOT, BODY <br />
+                  BACK
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-      <script src="script.js"></script>
-    </section>
+    </div>
+    <!-----services llanera------>
+    <div id="services">
+      <div class="container">
+        <h1 class="title">Our Services</h1>       
+        <div class="footm">
+          <div>
+            <h1>Foot Massage</h1>
+            <p>
+              Foot massage is a relaxing and therapeutic technique that focuses on the feet to release tension
+               and promote overall well-being. This type of massage involves applying pressure to specific points on the feet, 
+              which correspond to different areas of the body.<br><br>
+              Foot massage can provide a variety of benefits, including reducing stress and anxiety, relieving pain
+              and stiffness, improving circulation, and promoting better sleep.
+            </p>
+          </div>
+        </div>
+        <div class="backm">
+          <div>
+            <h1>Back Massage</h1>
+            <p>
+              A back massage is a therapeutic technique that involves manipulating the muscles and soft
+              tissues of the back to relieve tension, reduce stress, and promote relaxation. During a back
+              massage, a trained massage therapist will use a variety of techniques, including kneading, stroking,
+              and rubbing, to target specific areas of the back.<br><br>
+              The benefits of a back massage include improved circulation, increased range of motion, decreased muscle
+              tension and pain, improved posture, and reduced stress and anxiety levels. Regular back
+              massages can also improve sleep quality, boost the immune system, and promote an overall sense of well-being.
+            </p>
+          </div>
+        </div>
+        <div class="bodym">
+          <div>
+            <h1>Body Massage</h1>
+            <p>
+              A body massage can provide a variety of benefits, including reducing stress and anxiety,
+              improving circulation, easing muscle pain and stiffness, 
+              and promoting relaxation and better sleep.
+              It can also help to boost the immune system and improve overall well-being.<br><br>
+              But this specific body massage is special since you have the
+              option to communicate with your therapist and let them know which areas you would 
+              like them to focus on. They will work with you to create a personalized massage
+              plan that addresses your individual concerns, and they will adjust their
+              techniques to ensure maximum comfort and effectiveness.  
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!----LOCATION-->
+    <div id="location">
+      <div class="container">
+        <h1 class="title">Location</h1>
+        <div class="hobby-list">
+          <div class="ustp">
+            <img src="images/try3.png" alt="ustp" />
+            <div class="layer">
+              <p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1015.4451838756089!2d124.6559416551115!3d8.4848247163346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32fff2c3ca5ae8c7%3A0x880805868ab84491!2sUniversity%20of%20Science%20and%20Technology%20of%20Southern%20Philippines%20-%20CDO%20Campus!5e0!3m2!1sen!2sph!4v1679592659962!5m2!1sen!2sph" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </p>
+            </div>
+        </div>
+      </div>
+    </div>  
+    <!--------CONTACT----->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="title">Contact Us!</h1>
+            <p>
+              <i class="fa-sharp fa-solid fa-paper-plane"></i
+              >murillojuancarlos499@gmail.com
+            </p>
+            <p><i class="fa-solid fa-phone-volume"></i>+639550470385</p>
+            <div class="social-icons">
+              <a
+                href="https://web.facebook.com/juancarlos.murillo.9638"
+                target="_blank"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="https://twitter.com/OtakuBeLike123" target="_blank"
+                ><i class="fa-brands fa-twitter-square"></i
+              ></a>
+              <a href="https://www.instagram.com/huwancarloows/" target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="https://github.com/huwancarlows" target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+            <a
+              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              target="_blank"
+              class="btn btn2"
+              >Pamphlet!</a
+            >
+          </div>
+          <div class="contact-right">
+            <form>
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="Submit" class="btn btn2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-skills");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
   </body>
 </html>
