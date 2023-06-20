@@ -8,23 +8,33 @@
     <title>Document</title>
 </head>
 <body>
-    <section class="wrapper">
-      <div class="form signup">
-        <header>Signup</header>
-        <form action="#">
-          <i class="fa-solid fa-user fa-bounce"></i>
-          <input type="text" placeholder="Full name" id="usr" required />
-          <i class="fa-solid fa-envelope fa-bounce"></i>
-          <input type="text" placeholder="Email address" id="eml" required />
-          <i class="fa-solid fa-lock fa-bounce"></i>
-          <input type="password" placeholder="Password" id="pwd" required />
-          <div class="checkbox">
-            <input type="checkbox" id="signupCheck" />
-            <label for="signupCheck">I accept all terms & conditions</label>
-          </div>
-          <input type="submit" value="Signup" onclick="addData()" />
-        </form>
+  <div class="wrapper">
+    <form id="signup-form" class="form">
+
+      <h1 class="signup-heading">Sign Up</h1>
+      <span></span>
+
+      <div class="input-field">
+        <input type="text" name="firstname" id="firstname" placeholder="Firstname">
+        <small id="fnameError"></small>
       </div>
+
+      <div class="input-field">
+        <input type="text" name="email" id="email" placeholder="Email Address">
+        <small id="emailError"></small>
+      </div>
+
+      <div class="input-field">
+        <input type="password" name="password" id="password" placeholder="Password">
+        <small id="passwordError"></small>
+      </div>
+
+      <div class="button-field">
+        <button type="submit" class="submit-btn">Sign Up</button>
+        <p class="account-exist">Already have an account?<a href="login.html" class="login">Log In</a></p>
+      </div>
+      
+    </form>
       <script src="script.js"></script>
     </section>
 </body>

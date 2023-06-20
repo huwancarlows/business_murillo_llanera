@@ -13,21 +13,26 @@
   </head>
   <body>
     <section class="wrapper">
-      <div class="form signup">
-        <header>Login</header>
-        <form action="#">
-          <input type="text" placeholder="Email address" id="email" required />
-          <input
-            type="password"
-            placeholder="Password"
-            id="password"
-            required
-          />
-          <a href="#">Forgot password?</a>
-          <input type="submit" value="Login" onclick="auth()" />
-        </form>
-      </div>
+      <form id="login-form" class="form">
+
+        <h1 class="login-heading">Login</h1>
+        <span></span>
+  
+        <div class="input-field">
+          <input type="text" name="email" id="email" placeholder="Email Address">
+          <small id="emailError"></small>
+        </div>
+  
+        <div class="input-field">
+          <input type="password" name="password" id="password" placeholder="Password">
+          <small id="passwordError"></small>
+        </div>
+  
+        <div class="input-field">
+          <button type="submit" class="submit-btn">Log In</button>
+          <p class="no-account">Do not have an account?<a href="signup.html" class="register">Sign Up</a></p>
+        </div>  
+      </form>
       <script src="script.js"></script>
-    </section>
   </body>
 </html>
