@@ -24,6 +24,7 @@ body{
 .container{
     padding: 5px 5%;
 }
+
 nav{
     display:flex;
     align-items: center;
@@ -46,6 +47,22 @@ nav ul li a{
         border: 1px solid #F7DDA4;
         transition: background 0.5s;
 }
+
+.lgt-btn {
+        display: inline-block;
+        list-style: none;
+        margin: 10px 20px;
+        text-decoration: none;
+        color: white;
+        padding: 5px 20px;
+        border: 1px solid #F7DDA4;
+        transition: background 0.5s;
+  }
+  
+.lgt-btn:hover {
+    background-color: #E2C275;
+    color: white;
+  }
 
 nav ul li a:hover{
     background-color: #E2C275;
@@ -437,4 +454,12 @@ form .btn2{
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
+}
+
+#username{
+    font-family: Oswald;    
+    color: white;
+    text-align: center;
+    margin-top: 20%;
+    font-size: 30px;
 }

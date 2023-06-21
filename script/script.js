@@ -1,5 +1,5 @@
 // inputs
-const firstname = document.querySelector('#firstname');
+const username = document.querySelector('#username');
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
 const input = document.querySelectorAll('input');
@@ -9,7 +9,7 @@ const signupForm = document.querySelector('#signup-form');
 const loginForm = document.querySelector('#login-form');
 
 // errors
-const fnameError = document.getElementById('fnameError');
+const unameError = document.getElementById('unameError');
 const emailError = document.getElementById('emailError');
 const passwordError = document.getElementById('passwordError');
 const message = document.querySelector('span');
@@ -24,31 +24,31 @@ if (signupForm) {
   signupForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const firstNameValue = firstname.value.trim();
+    const userNameValue = username.value.trim();
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
 
     const min = 2;
 
-    if (firstNameValue === '') {
-      fnameError.innerText = 'First name is required.'
-      fnameError.classList.add('error');
-      firstname.style.border = '2px solid red';
+    if (userNameValue === '') {
+      unameError.innerText = 'username name is required.'
+      unameError.classList.add('error');
+      username.style.border = '2px solid red';
 
-    } else if (firstNameValue.length < min) {
-      fnameError.innerText = 'Minimum length required is 2.';
-      fnameError.classList.add('error');
-      firstname.style.border = '2px solid red';
+    } else if (userNameValue.length < min) {
+      unameError.innerText = 'Minimum length required is 2.';
+      unameError.classList.add('error');
+      username.style.border = '2px solid red';
 
-    } else if (!validName(firstNameValue)) {
-      fnameError.innerText = 'First name is not valid.';
-      fnameError.classList.add('error');
-      firstname.style.border = '2px solid red';
+    } else if (!validName(userNameValue)) {
+      unameError.innerText = 'username name is not valid.';
+      unameError.classList.add('error');
+      username.style.border = '2px solid red';
 
     } else {
-      localStorage.setItem('firstname', firstNameValue);
-      fnameError.innerText = '';
-      firstname.style.border = '2px solid green';
+      localStorage.setItem('username', userNameValue);
+      unameError.innerText = '';
+      username.style.border = '2px solid green';
     }
 
     if (emailValue === '') {
@@ -85,13 +85,13 @@ if (signupForm) {
     }
 
 
-    const getFirstName = localStorage.getItem('firstname');
+    const getUserName = localStorage.getItem('username');
     const getEmail = localStorage.getItem('email');
     const getPassword = localStorage.getItem('password');
 
 
-    const getSignup = getFirstName && getEmail && getPassword;
-    const getSignupValue = firstNameValue && emailValue && passwordValue;
+    const getSignup = getUserName && getEmail && getPassword;
+    const getSignupValue = userNameValue && emailValue && passwordValue;
 
 
     if (getSignupValue === '') {
@@ -124,7 +124,7 @@ function validEmail(email) {
 }
 
 function validPassword(password) {
-  const re = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+  const re = /^[a-zA-Z]+$/;
   return re.test(password);
 }
 
@@ -142,9 +142,9 @@ if (loginForm) {
     const getEmailAddress = localStorage.getItem('email');
     const getPasword = localStorage.getItem('password');
     
-    
+      
     if (emailValue === getEmailAddress && passwordValue === getPasword) {
-      location.href = 'member-page.html';
+      location.href = 'landing.html';
 
     } else if (emailValue === '' || passwordValue === '') {
       message.innerText = 'Email address and password are required.';
@@ -169,10 +169,10 @@ if (loginForm) {
 // user logout
 if (logoutBtn) {
 
-  const firstname = document.getElementById('firstname');
+  const username = document.getElementById('username');
 
-  firstname.innerText = localStorage.getItem('firstname');
-  firstname.style.color = 'orange';
+  username.innerText = localStorage.getItem('username');
+  username.style.color = '#F7DDA4';
 
   logoutBtn.addEventListener('click', function() {
     location.replace('index.html');

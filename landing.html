@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css">
     <script
       src="https://kit.fontawesome.com/7feff4d203.js"
       crossorigin="anonymous"
@@ -18,12 +19,13 @@
         <nav>
           <img src="images/logo.png" class="logo" />
           <ul>
+            <li><br><span id="username"></span></li>
             <li><a href="#header">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#location">Location</a></li>
             <li><a href="#contact">Contacts</a></li>
-            <li><a href="index.html">Sign Out</a></li>
+            <li class="logout"><button id="logout" class="lgt-btn">Logout</button></li>
           </ul>
         </nav>
         <div class="headertext">
@@ -271,5 +273,6 @@ Our team of expert therapists is dedicated to providing you with a truly excepti
         document.getElementById(tabname).classList.add("active-tab");
       }
     </script>
+    <script src="script/script.js"></script>
   </body>
 </html>
