@@ -1,13 +1,38 @@
-@media (max-width: 700px) {
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Oswald;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color:#F7DDA4;
+    color: white;
+
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/try1.jpg);
+}
+.container{
+    padding: 5px 5%;
+}
 
 nav{
-    height: 100vh;
-    flex-direction: column;
-    justify-content: center;
+    display:flex;
     align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .logo{
-    width: 150px;
+    width: 110px;
 }
 nav ul li{
     display: inline-block;
@@ -15,6 +40,9 @@ nav ul li{
     margin: 10px 20px;
 }
 
+span{
+    font-size: 30px
+}
 nav ul li a{
         text-decoration: none;
         color: white;
@@ -24,20 +52,19 @@ nav ul li a{
 }
 
 .lgt-btn {
-        display: inline-block;
-        list-style: none;
-        margin: 10px 20px;
+        background-color: transparent;
         text-decoration: none;
         color: white;
-        padding: 5px 20px;
+        padding: 8px 30px;
         border: 1px solid #F7DDA4;
         transition: background 0.5s;
   }
-  
+
 .lgt-btn:hover {
     background-color: #E2C275;
     color: white;
   }
+
 
 nav ul li a:hover{
     background-color: #E2C275;
@@ -54,7 +81,7 @@ nav ul li a:hover{
     font-size: 50px;
     margin-top: 20px;
 }
-/*--about*/
+/*---------------about----------------------*/
 #about{
 padding: 50px 50px;
 color: white;
@@ -76,7 +103,6 @@ background-color: #C36A2D;
     border-radius: 15px;
 }
 .slides{
-    
     width: 500%;
     height: 500px;
     display: flex;
@@ -133,18 +159,17 @@ justify-content: center;
     text-justify: inter-word;
 }
 
-.title{
-    font-family: Oswald;
-    font-size: 60px;
-    font-weight: 600;
-    color: #C36A2D;
-}
-.h1{
-    font-family: Oswald;
+.aboutcol2 h1{   
     font-size: 60px;
     font-weight: 600;
     color: white;
 }
+.title{ 
+    font-size: 60px;
+    font-weight: 600;
+    color: #C36A2D;
+}
+
 .tabtitles{
     display: flex;
     margin: 20px 0 40px;
@@ -156,23 +181,7 @@ justify-content: center;
     cursor: pointer;
     position: relative;
 }
-.tab-links::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: white;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
-}
-.tab-links.active-link::after{
-    width: 50%;
-}
-.tab-skills ul li{
-    list-style: none;
-    margin: 10px 0;
-}
+
 .tab-skills ul li span{
     color: green;
     font-size: 14px;
@@ -185,8 +194,7 @@ justify-content: center;
 }
 
 
-/*----services--*/
-
+/*------------------servi---------------ces--*/
 
 #services{
 padding: 30px 0;
@@ -224,7 +232,7 @@ transition: background 0.5s, transform 0.5s;
 }
 
 .footm div:hover{
-    background-image: url(images/footm.jpg);
+    background-image: url(../images/footm.jpg);
     transform: translateY(-10px);
     color: white;
 }
@@ -261,7 +269,7 @@ transition: background 0.5s, transform 0.5s;
 }
 
 .backm div:hover{
-    background-image: url(images/backm.jpg);
+    background-image: url(../images/backm.jpg);
     transform: translateY(-10px);
     color: white;
 }
@@ -300,7 +308,7 @@ transition: background 0.5s, transform 0.5s;
 }
 
 .bodym div:hover{
-    background-image: url(images/bodym.jpg);
+    background-image: url(../images/bodym.jpg);
     transform: translateY(-10px);
     color: white;
 }
@@ -343,13 +351,6 @@ transition: background 0.5s, transform 0.5s;
     font-size: 14px;
     transition: height 0.5s;
 }
-.layer p{
-    width: 100%;
-    border-radius: 10px;
-    display: block;
-    transition: transform 0.5s;
-
-}
 .ustp:hover img{
     transform: scale(1.1);
 }
@@ -357,10 +358,10 @@ transition: background 0.5s, transform 0.5s;
     height: 100%;
 }
 .btn{
+    background: transparent;
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid silver;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -368,7 +369,6 @@ transition: background 0.5s, transform 0.5s;
     transition: background 0.5s;
 }
 .btn:hover{
-    background:  #C36A2D;
     color: white;
 }
 /*-----contact------*/
@@ -429,14 +429,4 @@ form .btn2{
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
-}
-
-#username{
-    font-family: Oswald;    
-    color: white;
-    text-align: center;
-    margin-top: 20%;
-    font-size: 30px;
-}
-
 }
